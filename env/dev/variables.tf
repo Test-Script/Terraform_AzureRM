@@ -1,4 +1,8 @@
-variable "resource_group_name" {
+variable "rg-identity" {
+  type = string
+}
+
+variable "rg-security" {
   type = string
 }
 
