@@ -1,17 +1,46 @@
-rg-identity = "rg-identity-test"
+location = "centralindia"
 
-rg-security = "rg-security-test"
+resource_groups = {
+  identity = {
+    name = "rg-identity-test"
+    tags = {
+      Environment = "Development"
+    }
+  }
 
-rg-network-security = "rg-network-security-test"
+  security = {
+    name = "rg-security-test"
+    tags = {
+      Environment = "Development"
+    }
+  }
 
-rg-app = "rg-app-test"
+  network_security = {
+    name = "rg-network-security-test"
+    tags = {
+      Environment = "Development"
+    }
+  }
 
-rg-vm = "rg-vm-test"
+  vm = {
+    name = "rg-vm-test"
+    tags = {
+      Environment = "Development"
+    }
+  }
 
-rg-aks = "rg-aks-test"
+  app = {
+    name = "rg-app-test"
+    tags = {
+      Environment = "Development"
+    }
+  }
 
-location            = "Central India"
+  aks = {
+    name = "rg-aks-test"
+    tags = {
+      Environment = "Development"
+    }
+  }
 
-tags = {
-  Environment = "Development_Test"
 }

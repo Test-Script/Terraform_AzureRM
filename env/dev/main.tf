@@ -1,36 +1,8 @@
-module "rg-identity" {
+module "rg" {
   source   = "../../modules/resource_group"
-  name     = var.rg-identity
-  location = var.location
-  tags     = var.tags
-}
+  for_each = var.resource_groups
 
-module "rg-security" {
-  source   = "../../modules/resource_group"
-  name     = var.rg-security
+  name     = each.value.name
   location = var.location
-}
-
-module "rg-network-security" {
-  source   = "../../modules/resource_group"
-  name     = var.rg-network-security
-  location = var.location
-}
-
-module "rg-vm" {
-  source   = "../../modules/resource_group"
-  name     = var.rg-vm
-  location = var.location
-}
-
-module "rg-app" {
-  source   = "../../modules/resource_group"
-  name     = var.rg-app
-  location = var.location
-}
-
-module "rg-aks" {
-  source   = "../../modules/resource_group"
-  name     = var.rg-aks
-  location = var.location
+  tags     = each.value.tags
 }
