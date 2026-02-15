@@ -1,7 +1,11 @@
-variable "name" {
-  type = string
+output "name" {
+  value = azurerm_resource_group.this.name
 }
 
-variable "location" {
-  type = string
+output "location" {
+  value = azurerm_resource_group.this.location
+}
+
+output "id" {
+  value = azurerm_resource_group.this.id
 }

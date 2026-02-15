@@ -6,3 +6,6 @@
 # Terraform state (contains secrets in plain text!)
 terraform.tfstate*
 .terraform/
+
+# Terraform lock file (contains provider version information)
+.terraform.lock.hcl

@@ -1,7 +1,13 @@
-output "name" {
-  value = azurerm_resource_group.this.name
+variable "name" {
+  type = string
 }
 
-output "location" {
-  value = azurerm_resource_group.this.location
+variable "location" {
+  type = string
+}
+
+variable "tags" {
+  type        = map(string)
+  description = "Tags for Resource Group"
+  default     = {}
 }
