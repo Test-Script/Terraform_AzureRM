@@ -1,0 +1,8 @@
+# Local secret files
+.env
+*.tfvars
+*.tfvars.json
+
+# Terraform state (contains secrets in plain text!)
+terraform.tfstate*
+.terraform/
