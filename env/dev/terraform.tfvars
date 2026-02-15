@@ -5,6 +5,8 @@ resource_groups = {
     name = "rg-identity-test"
     tags = {
       Environment = "Development"
+      Owner       = "Identity Team"
+      CostCenter  = "ABC123"
     }
   }
 
@@ -12,6 +14,8 @@ resource_groups = {
     name = "rg-security-test"
     tags = {
       Environment = "Development"
+      Owner       = "Security Team"
+      CostCenter  = "ABC123"
     }
   }
 
@@ -19,6 +23,8 @@ resource_groups = {
     name = "rg-network-security-test"
     tags = {
       Environment = "Development"
+      Owner       = "Network Security Team"
+      CostCenter  = "ABC123"
     }
   }
 
@@ -26,6 +32,8 @@ resource_groups = {
     name = "rg-vm-test"
     tags = {
       Environment = "Development"
+      Owner       = "VM Team"
+      CostCenter  = "ABC123"
     }
   }
 
@@ -33,6 +41,8 @@ resource_groups = {
     name = "rg-app-test"
     tags = {
       Environment = "Development"
+      Owner       = "Application Team"
+      CostCenter  = "ABC123"
     }
   }
 
@@ -40,6 +50,8 @@ resource_groups = {
     name = "rg-aks-test"
     tags = {
       Environment = "Development"
+      Owner       = "AKS Team"
+      CostCenter  = "ABC123"
     }
   }
 
