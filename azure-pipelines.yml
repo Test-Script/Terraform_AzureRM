@@ -52,6 +52,7 @@ stages:
   - deployment: UATScript
     displayName: 'Run Multiple Scripts | UAT Run'
     environment: 'Dry Run'
+    condition: succeeded()
     strategy:
       runOnce:
         deploy:
