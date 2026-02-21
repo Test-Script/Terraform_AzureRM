@@ -46,7 +46,7 @@ stages:
           echo "This is a script with a custom display name."
         displayName: 'Run a multi-line script with a custom name | Test'
 
-- stage: UAT Run
+- stage: UatRun
   dependsOn: Test
   jobs:
   - deployment: UATScript
