@@ -4,26 +4,12 @@ trigger:
 pool:
   name: Self_Agent_Pool
 
-stages:
-- stage: Build
-  displayName: 'Build stage'
-  jobs:
-  - job: Build
-    displayName: 'Build job'
-    steps:
-    - script: echo "Building the project..."
-      displayName: 'Build project'
-
-- stage: Test
-  displayName: 'Test stage'
-  jobs:
-  - job: Test
-    displayName: 'Test job'
-    steps:
-    - script: echo "Running tests..."
-      displayName: 'Run tests'
-  - job: CodeAnalysis
-    displayName: 'Code Analysis job'
-    steps:
-    - script: echo "Running code analysis..."
-      displayName: 'Run code analysis'
+steps:
+  - script: echo "Hello, World!"
+    displayName: 'Run a one-line script'
+  - script: |
+      echo "This is a multi-line script."
+      echo "You can run multiple commands here."
+  - script: |
+      echo "This is a script with a custom display name."
+    displayName: 'Run a multi-line script with a custom name'
