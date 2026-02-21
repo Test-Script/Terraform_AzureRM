@@ -6,6 +6,7 @@ pool:
 
 variables:
 - group: Dry Run
+- group: Test Run
 
 stages:
 - stage: DryRun
@@ -19,6 +20,9 @@ stages:
           echo "This is a multi-line script."
           echo "You can run multiple commands here."
           echo "$(Key1)"
+          echo "$(Key2)"
+          echo "$(Key_Test1)"
+          echo "$(Key_Test2)"
         displayName: 'Run a multi-line script | Dry Run'
       - script: |
           echo "This is a script with a custom display name."
