@@ -10,6 +10,7 @@ steps:
   - script: |
       echo "This is a multi-line script."
       echo "You can run multiple commands here."
+    displayName: 'Run a multi-line script'
   - script: |
       echo "This is a script with a custom display name."
     displayName: 'Run a multi-line script with a custom name'
