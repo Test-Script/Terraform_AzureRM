@@ -46,6 +46,24 @@ stages:
           echo "This is a script with a custom display name."
         displayName: 'Run a multi-line script with a custom name | Test'
 
+- stage: UAT Run
+  dependsOn: Test
+  jobs:
+  - deployment: UATScript
+    displayName: 'Run Multiple Scripts | UAT Run'
+    environment: 'UAT-Env'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - script: echo "Hello, World!"
+              displayName: 'Run a one-line script | UAT Run'
+            - script: |
+                echo "This is a multi-line script."
+                echo "Key from Variable Group: $(Key1)"
+                echo "Local Variable: $(my-local-var)"
+              displayName: 'Run a multi-line script | UAT Run'
+
 - stage: Prod
   dependsOn: Test
   jobs:
