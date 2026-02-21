@@ -16,3 +16,6 @@ stages:
   jobs:
   - job: Test
     displayName: 'Test job'
+    steps:
+    - script: echo "Running tests..."
+      displayName: 'Run tests'
