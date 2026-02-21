@@ -4,13 +4,28 @@ trigger:
 pool:
   name: Self_Agent_Pool
 
-steps:
-  - script: echo "Hello, World!"
-    displayName: 'Run a one-line script'
-  - script: |
-      echo "This is a multi-line script."
-      echo "You can run multiple commands here."
-    displayName: 'Run a multi-line script'
-  - script: |
-      echo "This is a script with a custom display name."
-    displayName: 'Run a multi-line script with a custom name'
+jobs:
+- job: RunScripts
+  displayName: 'Run Multiple Scripts'
+  steps:
+    - script: echo "Hello, World!"
+      displayName: 'Run a one-line script'
+    - script: |
+        echo "This is a multi-line script."
+        echo "You can run multiple commands here."
+      displayName: 'Run a multi-line script'
+    - script: |
+        echo "This is a script with a custom display name."
+      displayName: 'Run a multi-line script with a custom name'
+- job: RunScripts
+  displayName: 'Run Multiple Scripts'
+  steps:
+    - script: echo "Hello, World!"
+      displayName: 'Run a one-line script'
+    - script: |
+        echo "This is a multi-line script."
+        echo "You can run multiple commands here."
+      displayName: 'Run a multi-line script'
+    - script: |
+        echo "This is a script with a custom display name."
+      displayName: 'Run a multi-line script with a custom name'
