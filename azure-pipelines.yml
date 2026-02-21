@@ -4,11 +4,15 @@ trigger:
 pool:
   name: Self_Agent_Pool
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: Build
+  displayName: 'Build stage'
+  jobs:
+  - job: Build
+    displayName: 'Build job'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- stage: Test
+  displayName: 'Test stage'
+  jobs:
+  - job: Test
+    displayName: 'Test job'
