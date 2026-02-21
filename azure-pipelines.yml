@@ -6,26 +6,26 @@ pool:
 
 jobs:
 - job: DryScript
-  displayName: 'Run Multiple Scripts'
+  displayName: 'Run Multiple Scripts | Dry Run'
   steps:
     - script: echo "Hello, World!"
-      displayName: 'Run a one-line script'
+      displayName: 'Run a one-line script | Dry Run'
     - script: |
         echo "This is a multi-line script."
         echo "You can run multiple commands here."
-      displayName: 'Run a multi-line script'
+      displayName: 'Run a multi-line script | Dry Run'
     - script: |
         echo "This is a script with a custom display name."
-      displayName: 'Run a multi-line script with a custom name'
+      displayName: 'Run a multi-line script with a custom name | Dry Run'
 - job: TestScripts
-  displayName: 'Run Multiple Scripts'
+  displayName: 'Run Multiple Scripts | Test'
   steps:
     - script: echo "Hello, World!"
-      displayName: 'Run a one-line script'
+      displayName: 'Run a one-line script | Test'
     - script: |
         echo "This is a multi-line script."
         echo "You can run multiple commands here."
-      displayName: 'Run a multi-line script'
+      displayName: 'Run a multi-line script | Test'
     - script: |
         echo "This is a script with a custom display name."
-      displayName: 'Run a multi-line script with a custom name'
+      displayName: 'Run a multi-line script with a custom name | Test'
