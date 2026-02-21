@@ -7,7 +7,8 @@ pool:
 variables:
 - group: Dry Run
 - group: Test Run
-
+- name: my-local-var
+  value: 'hello'
 stages:
 - stage: DryRun
   jobs:
@@ -23,6 +24,7 @@ stages:
           echo "$(Key2)"
           echo "$(Key_Test1)"
           echo "$(Key_Test2)"
+          echo "$(my-local-var)"
         displayName: 'Run a multi-line script | Dry Run'
       - script: |
           echo "This is a script with a custom display name."
