@@ -4,6 +4,9 @@ trigger:
 pool:
   name: Self_Agent_Pool
 
+variables:
+- group: Dry Run
+
 stages:
 - stage: DryRun
   jobs:
@@ -15,6 +18,7 @@ stages:
       - script: |
           echo "This is a multi-line script."
           echo "You can run multiple commands here."
+          echo "$(Key1)"
         displayName: 'Run a multi-line script | Dry Run'
       - script: |
           echo "This is a script with a custom display name."
