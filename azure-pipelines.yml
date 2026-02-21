@@ -25,7 +25,6 @@ stages:
   jobs:
   - job: TestScripts
     displayName: 'Run Multiple Scripts | Test'
-    dependsOn: DryScript
     steps:
       - script: echo "Hello, World!"
         displayName: 'Run a one-line script | Test'
@@ -42,7 +41,6 @@ stages:
   jobs:
   - job: ProdScripts
     displayName: 'Run Multiple Scripts | Prod'
-    dependsOn: TestScripts
     steps:
       - script: echo "Hello, World!"
         displayName: 'Run a one-line script | Prod'
