@@ -51,7 +51,7 @@ stages:
   jobs:
   - deployment: UATScript
     displayName: 'Run Multiple Scripts | UAT Run'
-    environment: 'UAT-Env'
+    environment: 'Dry Run'
     strategy:
       runOnce:
         deploy:
