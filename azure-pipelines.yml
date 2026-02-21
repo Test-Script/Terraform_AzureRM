@@ -10,6 +10,9 @@ stages:
   jobs:
   - job: Build
     displayName: 'Build job'
+    steps:
+    - script: echo "Building the project..."
+      displayName: 'Build project'
 
 - stage: Test
   displayName: 'Test stage'
