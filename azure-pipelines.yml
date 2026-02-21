@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: Azure_Agent
+  vmImage: Self_Agent_Pool
 
 steps:
 - script: echo Hello, world!
