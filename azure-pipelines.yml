@@ -19,6 +19,7 @@ jobs:
       displayName: 'Run a multi-line script with a custom name | Dry Run'
 - job: TestScripts
   displayName: 'Run Multiple Scripts | Test'
+  dependsOn: DryScript
   steps:
     - script: echo "Hello, World!"
       displayName: 'Run a one-line script | Test'
@@ -29,3 +30,16 @@ jobs:
     - script: |
         echo "This is a script with a custom display name."
       displayName: 'Run a multi-line script with a custom name | Test'
+- job: ProdScripts
+  displayName: 'Run Multiple Scripts | Prod'
+  dependsOn: TestScripts
+  steps:
+    - script: echo "Hello, World!"
+      displayName: 'Run a one-line script | Prod'
+    - script: |
+        echo "This is a multi-line script."
+        echo "You can run multiple commands here."
+      displayName: 'Run a multi-line script | Prod'
+    - script: |
+        echo "This is a script with a custom display name."
+      displayName: 'Run a multi-line script with a custom name | Prod'
