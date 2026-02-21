@@ -19,3 +19,8 @@ stages:
     steps:
     - script: echo "Running tests..."
       displayName: 'Run tests'
+  - job: CodeAnalysis
+    displayName: 'Code Analysis job'
+    steps:
+    - script: echo "Running code analysis..."
+      displayName: 'Run code analysis'
